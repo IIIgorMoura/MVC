@@ -4,9 +4,9 @@ const resultado = express.Router();
 
 resultado.post('/', (req, res) => {
     const { cateto1, cateto2 } = req.body;
-    const hipotesuna = Calculadora.Hipotesuna(
+    const hipotenusa = Calculadora.Hipotesuna(
         parseFloat(cateto1), parseFloat(cateto2));
-        res.redirect(`/resultado.html?hipotenusa=${hipotesuna}`)
+        res.redirect(`/resultado.html?hipotenusa=${hipotenusa}`)
 });
 
 module.exports = resultado
